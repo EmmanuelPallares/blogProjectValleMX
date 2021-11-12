@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import { getCategories } from '../services';
+import { getCategories } from "../services";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -13,11 +14,20 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>
+    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 ">
+      <div className="inline">
+        <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categorias</h3>
+        <img src="https://i.imgur.com/MPIUWuE.png" height="35px" width="35px" />
+      </div>
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
-          <span className={`cursor-pointer block ${(index === categories.length - 1) ? 'border-b-0' : 'border-b'} pb-3 mb-3`}>{category.name}</span>
+          <span
+            className={`cursor-pointer block ${
+              index === categories.length - 1 ? "border-b-0" : "border-b"
+            } pb-3 mb-3`}
+          >
+            {category.name}
+          </span>
         </Link>
       ))}
     </div>
