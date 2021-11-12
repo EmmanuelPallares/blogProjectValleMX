@@ -7,13 +7,13 @@ import { grpahCMSImageLoader } from "../util";
 
 const PostCard = ({ post }) => (
   <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-    {/* <div className="relative shadow-md inline-block w-full h-60 lg:h-80 mb-6">
+    {/* <div className='relative shadow-md inline-block w-full h-60 lg:h-80 mb-6'>
       <Image
         unoptimized
         loader={grpahCMSImageLoader}
         alt={post.title}
-        className="shadow-lg rounded-t-lg lg:rounded-lg"
-        layout="fill"
+        className='shadow-lg rounded-t-lg lg:rounded-lg'
+        layout='fill'
         src={post.featuredImage.url}
       />
     </div> */}
@@ -52,10 +52,10 @@ const PostCard = ({ post }) => (
           stroke="currentColor"
         >
           {/* <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+            d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
           /> */}
         </svg>
         <span className="align-middle">
