@@ -36,7 +36,7 @@ const Header = ({ post }) => {
       <nav className="navbar navbar-expand-lg  background-milenio-nav  text-black ">
         <div className="container">
           <Link className="navbar-brand" href="/">
-            <h1 className="h1-titulo ">VALLE DE SANTIAGO BLOG</h1>
+            <h1 className="h1-titulo ">VALLE DE SANTIAGO BLOG oficial</h1>
           </Link>
           <hr />
           <button
