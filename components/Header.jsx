@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Clock from "react-clock";
+
 import Head from "next/head";
 import Link from "next/link";
 import { getCategories } from "../services";
@@ -78,7 +78,6 @@ const Header = ({ post }) => {
               <p className="ml-3 font-medium text-white truncate">
                 <div className="text-center mt-1 padding-0">
                   <p>Hora Actual</p>
-                  <Clock value={value} />
                 </div>
                 <span className="md:hidden">Bienvenido</span>
               </p>
