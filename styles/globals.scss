@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
 html,
 body {
   padding: 0;
@@ -14,7 +16,7 @@ body {
     height: 100vh;
     //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
     // background: #D3D3D3;
-    background-color: #fff;
+    background-image: url("../public/bg.jpg");
     position: fixed;
     left: 0;
     top: 0;
@@ -24,21 +26,11 @@ body {
     background-size: cover;
   }
 }
-.h1-titulo {
-  font-size: 42px;
-  font-family: "Anton", sans-serif;
-}
 
 .text-shadow {
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }
-.background-milenio-nav {
-  color: white;
-  background-color: #cbd8d8;
-}
-.navbar-milenio-gray {
-  background-color: #333;
-}
+
 .adjacent-post {
   & .arrow-btn {
     transition: width 300ms ease;
@@ -66,43 +58,6 @@ a {
   text-decoration: none;
 }
 
-.bn9 {
-  padding: 2px;
-  outline: 0;
-  font-size: 17px;
-  color: rgb(255, 255, 255);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#fdde5c),
-    color-stop(#f8ab5e),
-    color-stop(#f56a62),
-    color-stop(#a176c8),
-    color-stop(#759beb),
-    color-stop(#65beb3),
-    to(#70db96)
-  );
-  background: linear-gradient(
-    to right,
-    #fdde5c,
-    #f8ab5e,
-    #f56a62,
-    #a176c8,
-    #759beb,
-    #65beb3,
-    #70db96
-  );
-  border-radius: 30px;
-  border: 0;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.bn9 > span {
-  display: block;
-  padding: 10px 20px;
-  font-size: 17px;
-  background: #0e0e10;
-  border-radius: 30px;
+* {
+  box-sizing: border-box;
 }
