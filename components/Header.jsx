@@ -149,6 +149,12 @@ const Header = ({ post }) => {
                 className="navbar-burger self-center mr-12 lg:hidden xl:hidden text-red-700 "
                 onClick={() => setNavbarOpen(!navbarOpen)}
               >
+                <button
+                  className="text-pink-500 bg-transparent border border-solid border-pink-500 hover:bg-pink-500 hover:text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3  rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  type="button"
+                >
+                  Regular
+                </button>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 hover:text-gray-200"

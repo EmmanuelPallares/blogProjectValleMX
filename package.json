@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css",
     "build:prod": "NODE_ENV=production npx tailwindcss -i ./public/tailwind.css -o ./dist/tailwind.css --minify",
-    "build": "postcss ./src/tailwind.css -o ./public/css/main.css",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
