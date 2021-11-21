@@ -92,7 +92,6 @@ export const getSimilarPosts = async (categories, slug) => {
   const query = gql`
     query GetPostDetails($slug: String!, $categories: [String!]) {
       posts(
-        orderBy: createdAt_DESC
         where: {
           slug_not: $slug
           AND: { categories_some: { slug_in: $categories } }
@@ -118,7 +117,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
     query GetAdjacentPosts($createdAt: DateTime!, $slug: String!) {
       next: posts(
         first: 1
-        orderBy: createdAt_DESC
+        orderBy: createdAt_ASC
         where: { slug_not: $slug, AND: { createdAt_gte: $createdAt } }
       ) {
         title
@@ -151,10 +150,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
 export const getCategoryPost = async (slug) => {
   const query = gql`
     query GetCategoryPost($slug: String!) {
-      postsConnection(
-        orderBy: createdAt_DESC
-        where: { categories_some: { slug: $slug } }
-      ) {
+      postsConnection(where: { categories_some: { slug: $slug } }) {
         edges {
           cursor
           node {
@@ -191,7 +187,7 @@ export const getCategoryPost = async (slug) => {
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetCategoryPost() {
-      posts(orderBy: createdAt_DESC,where: {featuredPost: true}) {
+      posts( orderBy: createdAt_DESC,where: {featuredPost: true}) {
         author {
           name
           photo {
