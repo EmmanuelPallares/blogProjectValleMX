@@ -43,7 +43,7 @@ const Header = ({ post }) => {
               <div className="px-5 xl:px-12 py-6 flex w-full items-center">
                 <a className="text-3xl font-bold font-heading">
                   <Link className="text-3xl font-bold font-heading" href="/">
-                    Blog Fullstack
+                    Valle Info
                   </Link>
                 </a>
                 <ul className=" px-4 mx-auto font-semibold font-heading space-x-12">
