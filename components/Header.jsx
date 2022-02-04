@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import logo from "../assets/metabollogo.png";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import { getCategories } from "../services";
@@ -41,16 +42,36 @@ const Header = ({ post }) => {
           crossorigin="anonymous"
         ></script>
       </Head>
-      <div className="bg-white shadow-lg rounded-lg lg:p-0 pb-0 mb-6 mt-0">
+      <div className="bg-gradient-to-r from-green-300 to-blue-400 shadow-lg  lg:p-0 pb-0 mb-6 mt-0">
         <div className="flex flex-wrap place-items-center ">
           <section className="relative mx-auto">
-            <nav className="flex justify-between bg-gray-900 text-white w-screen">
+            <nav className="flex justify-between  text-white ">
+              <button
+                className="p-3 navbar-burger self-center mr-12 lg:hidden xl:hidden text-black-700 "
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 hover:text-black-200"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
               <div className="px-5 xl:px-12 py-6 flex w-full items-center">
                 <a className="text-3xl font-bold font-heading">
-                  <Link className="text-3xl font-bold font-heading" href="/">
-                    Valle Info
+                  <Link href="/">
+                    <Image src={logo} width="250" height="200" />
                   </Link>
                 </a>
+
                 <ul className=" px-4 mx-auto font-semibold font-heading space-x-12">
                   <li className="xl:flex lg:flex text-end">
                     {categories.map((category, index) => (
@@ -74,26 +95,6 @@ const Header = ({ post }) => {
                 {/* Icons header */}
                 <div className="hidden xl:flex space-x-5 items-center"></div>
               </div>
-
-              <button
-                className="navbar-burger self-center mr-12 lg:hidden xl:hidden text-red-700 "
-                onClick={() => setNavbarOpen(!navbarOpen)}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 hover:text-gray-200"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
             </nav>
             <div
               className={

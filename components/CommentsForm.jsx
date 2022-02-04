@@ -83,7 +83,7 @@ const CommentsForm = ({ slug }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
-        Leave a Reply
+        Déjanos tus comentarios
       </h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea
@@ -124,24 +124,22 @@ const CommentsForm = ({ slug }) => {
           />
           <label className="text-gray-500 cursor-pointer" htmlFor="storeData">
             {" "}
-            Save my name, email in this browser for the next time I comment.
+            Recuerda mi nombre para el siguiente comentario
           </label>
         </div>
       </div>
-      {error && (
-        <p className="text-xs text-red-500">All fields are mandatory</p>
-      )}
+      {error && <p className="text-xs text-red-500">Obligatorio</p>}
       <div className="mt-8">
         <button
           type="button"
           onClick={handlePostSubmission}
           className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-red-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
         >
-          Post Comment
+          Comentar
         </button>
         {showSuccessMessage && (
           <span className="text-xl float-right font-semibold mt-3 text-green-500">
-            Comment submitted for review
+            Comentario cargado listo para revisión, Gracias.
           </span>
         )}
       </div>
