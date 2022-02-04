@@ -35,6 +35,11 @@ const Header = ({ post }) => {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="public/css/main.css" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8125276336532977"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <div className="bg-white shadow-lg rounded-lg lg:p-0 pb-0 mb-6 mt-0">
         <div className="flex flex-wrap place-items-center ">

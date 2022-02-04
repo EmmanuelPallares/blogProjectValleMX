@@ -68,7 +68,7 @@ const PostCard = ({ post }) => (
     </p>
     <div className="text-center mb-8">
       <Link href={`/post/${post.slug}`} className="bn9">
-        <button className="bn9">
+        <button className="">
           <span>Seguir Leyendo...</span>
         </button>
       </Link>
